@@ -1,0 +1,7 @@
+<!-- <button  *ngIf="!isSignedIn" (click)="signIn()">Sign in with Google</button> -->
+<app-photo-gallery #gal></app-photo-gallery>
+
+<button class="moving-button " (mouseover)="stopMoving()" (mouseleave)="startMoving()" (click)="gal.setNewDisplayedPhotos()"
+  [ngStyle]="{'position': 'absolute', 'top.px': positionY, 'left.px': positionX, 'transition': 'top 0.1s linear, left 0.1s linear'}">
+  <img style="background-color: transparent; mix-blend-mode: multiply;" src="test.gif" alt="Moving Button" width="30">
+</button>

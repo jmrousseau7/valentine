@@ -1,0 +1,40 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@import 'https://fonts.googleapis.com/css?family=Rock+Salt';
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+html {
+  font-size: 7px;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+      overflow: hidden;
+  font-family: "Rock Salt", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+  // background: url('https://images8.alphacoders.com/370/370799.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // min-height: 100vh;
+}
+
+body {
+  //background-color: #ba0001;
+   background-size: cover;
+   background-image: url('../public/background.jpg');
+  // /* Adjusts the image to cover the whole screen */
+  background-position: center;
+   background-repeat: no-repeat;
+}

@@ -1,0 +1,17 @@
+
+<div *ngIf="displayed.length > 0" class="container">
+
+
+  @for(photo of displayed; track photo){
+  <div class="polaroid" [ngStyle]="photo.styles" cdkDrag>
+    <div class="polaroid-img">
+      <div class="gloss"></div>
+      <img [src]="photo.baseUrl" [alt]="photo.filename" />
+    </div>
+
+    <p>{{ photo.mediaMetadata.creationTime | date }}</p>
+  </div>
+  }
+</div>
+
+<p *ngIf="ALLPHOTOS.length === 0" style="font-size: 30px;">Sra pas long 🐥❤️</p>

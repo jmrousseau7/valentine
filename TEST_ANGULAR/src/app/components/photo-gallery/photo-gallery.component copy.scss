@@ -1,0 +1,89 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+
+  .item {
+    padding: 21px;
+    text-align: center;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+$dirty-polaroid: #f0efe8;
+$black: #333333;
+$raleway: "Raleway", sans-serif;
+
+body {
+  background-color: $black;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0rem;
+  padding: 1rem;
+}
+
+.polaroid {
+  border-radius: 4px;
+  background-color: $dirty-polaroid;
+  box-shadow: 3px 3px 17px 1px rgba(0, 0, 0, 0.16);
+  //height: 100%;
+  //width: auto;
+  //width: 50px;
+  //height: 50px;
+  //overflow: hidden;
+  width: 100px;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotate(-1deg);
+  -webkit-box-shadow: inset 0px 0px 32px 2px rgba(201, 197, 171, 1);
+  -moz-box-shadow: inset 0px 0px 32px 2px rgba(201, 197, 171, 1);
+  box-shadow: inset 0px 0px 32px 2px rgba(201, 197, 171, 1);
+  margin: 1em;
+
+  transition: transform 0.3s ease;
+  position: relative;
+  /* Overlapping effect */
+
+
+  // img {
+  //   border-radius: 4px;
+  //   width: 200px;
+  //   height: 80%;
+  //   border: 1px solid $black;
+  // }
+  .container {
+    width: 100px; // Adjust size as needed
+    height: 100px; // Ensures a square container
+    //display: flex;
+    //align-items: center;
+    //justify-content: center;
+    overflow: hidden;
+
+    //    background-color: #f0f0f0; // Optional: background for transparency
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+
+
+  figcaption {
+    padding-top: 1em;
+    //padding-bottom: 1em;
+    font-family: $raleway;
+    //font-size: 1.5em;
+  }
+
+  &:nth-of-type(even) {
+    transform: rotate(2deg);
+  }
+}
